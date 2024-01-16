@@ -14,6 +14,8 @@ public:
 
     int GetNodeTo() const;
 
+    int GetNodeFrom() const;
+
     int GetReverseEdgeIndex() const;
 
     bool HasPositiveResidualCapacity() const;
@@ -21,6 +23,8 @@ public:
     int UpdateMinCapacity(int minCapacity) const;
     
     int GetCapacity() const;
+
+    void ResetFlow();
 
 private:
     int m_nodeTo;          // Nodul de destinație al arcului

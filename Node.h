@@ -7,7 +7,7 @@
 class Node
 {
 public:
-	const static int kradius = 10;
+	const static int kradius = 30;
 
 	Node() = default;
 

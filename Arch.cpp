@@ -17,7 +17,7 @@ int Arch::GetFlow() const
 
 QString Arch::GetArchData() const
 {
-    return QString("sadw");
+    return QString(" %1/%2").arg(m_flow).arg(m_capacity);
 }
 
 void Arch::UpdateFlow(int minCapacity)
@@ -28,6 +28,11 @@ void Arch::UpdateFlow(int minCapacity)
 int Arch::GetNodeTo() const
 {
     return m_nodeTo;
+}
+
+int Arch::GetNodeFrom() const
+{
+    return m_nodeFrom;
 }
 
 int Arch::GetReverseEdgeIndex() const
@@ -48,4 +53,9 @@ int Arch::UpdateMinCapacity(int minCapacity) const
 int Arch::GetCapacity() const
 {
     return m_capacity;
+}
+
+void Arch::ResetFlow()
+{
+    m_flow = 0;
 }
